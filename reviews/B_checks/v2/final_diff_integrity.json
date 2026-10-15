@@ -1,0 +1,11 @@
+{
+  "final_files_verified": 21,
+  "external_files_verified": 7,
+  "changed_snapshot_files": [
+    "main.pdf",
+    "main.tex",
+    "main.txt"
+  ],
+  "external_evidence_unchanged": true,
+  "final_pdf_sha256": "96b32fe1b039fbd590364027a2cf3858b71ce2f246c2afb444f7dde40a387b46"
+}

@@ -1,0 +1,9 @@
+{
+  "occupancy_table_rows": 21,
+  "occupancy_table_max_rounding_error": 4.9831394989041655e-05,
+  "linear_table_rows": 6,
+  "linear_table_max_rounding_error": 4.798379395198893e-05,
+  "mismatches": [],
+  "raw_to_summary_max_abs_error": 1.1102230246251565e-16,
+  "fixed_monotone_max_difference": 2.220446049250313e-16
+}

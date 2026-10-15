@@ -1,0 +1,167 @@
+{
+  "frozen_hashes_match": {
+    "main.pdf": true,
+    "references.bib": true,
+    "main.tex": true,
+    "main.txt": true
+  },
+  "source_hashes_match_run": {
+    "pilot.py": true,
+    "test_core.py": true,
+    "core.py": true,
+    "experiments.py": true,
+    "fetch_literature.py": true
+  },
+  "config_hash_matches_run": true,
+  "frozen_results_audit": {
+    "occupancy_settings": 21,
+    "occupancy_calibration_rows": 210000,
+    "linear_calibration_rows": 6000,
+    "max_mean_error": 1.1102230246251565e-16,
+    "max_se_error": 9.681925400295555e-17,
+    "max_occupancy_identity_error": 0.0,
+    "max_linear_cdf_error_via_piecewise_integral": 9.547918011776346e-15,
+    "max_certificate_error_via_binomial_root": 2.220446049250313e-16
+  },
+  "reproduction_npz_arrays_identical": {
+    "independent_test_audit.npz": true,
+    "linear_n199_a0.25.npz": true,
+    "linear_n199_a1.npz": true,
+    "linear_n49_a0.25.npz": true,
+    "linear_n49_a1.npz": true,
+    "linear_n999_a0.25.npz": true,
+    "linear_n999_a1.npz": true,
+    "occupancy_n19_K128_a0.1.npz": true,
+    "occupancy_n19_K16_a0.1.npz": true,
+    "occupancy_n19_K1900_a0.1.npz": true,
+    "occupancy_n19_K190_a0.05.npz": true,
+    "occupancy_n19_K190_a0.1.npz": true,
+    "occupancy_n19_K19_a0.1.npz": true,
+    "occupancy_n3_K1_a0.5.npz": true,
+    "occupancy_n3_K8_a0.1.npz": true,
+    "occupancy_n3_K8_a0.5.npz": true,
+    "occupancy_n499_K128_a0.1.npz": true,
+    "occupancy_n499_K16_a0.1.npz": true,
+    "occupancy_n499_K49900_a0.1.npz": true,
+    "occupancy_n499_K4990_a0.1.npz": true,
+    "occupancy_n499_K499_a0.1.npz": true,
+    "occupancy_n99_K10000_a0.1.npz": true,
+    "occupancy_n99_K128_a0.1.npz": true,
+    "occupancy_n99_K16_a0.1.npz": true,
+    "occupancy_n99_K9900_a0.1.npz": true,
+    "occupancy_n99_K990_a0.1.npz": true,
+    "occupancy_n99_K990_a0.2.npz": true,
+    "occupancy_n99_K99_a0.1.npz": true
+  },
+  "direct_scalar_vs_membership": {
+    "calibration_case_level_combinations": 1976,
+    "test_events": 149856,
+    "disagreements": 0
+  },
+  "rank_transfer_stress": {
+    "parameter_pairs": 800,
+    "min_bound_minus_rank_distance": 0.0,
+    "violations_above_2e_minus_12": 0
+  },
+  "packing_endpoint_enumeration": [
+    {
+      "K": 2,
+      "equal_size_masks": 2,
+      "proven_claim_separation": 0.5,
+      "observed_exact_separation": 0.5
+    },
+    {
+      "K": 3,
+      "equal_size_masks": 3,
+      "proven_claim_separation": 0.3333333333333333,
+      "observed_exact_separation": 0.6666666666666667
+    },
+    {
+      "K": 4,
+      "equal_size_masks": 6,
+      "proven_claim_separation": 0.5,
+      "observed_exact_separation": 0.5
+    },
+    {
+      "K": 5,
+      "equal_size_masks": 10,
+      "proven_claim_separation": 0.4,
+      "observed_exact_separation": 0.6
+    },
+    {
+      "K": 6,
+      "equal_size_masks": 20,
+      "proven_claim_separation": 0.5,
+      "observed_exact_separation": 0.5
+    },
+    {
+      "K": 7,
+      "equal_size_masks": 35,
+      "proven_claim_separation": 0.42857142857142855,
+      "observed_exact_separation": 0.5714285714285714
+    },
+    {
+      "K": 8,
+      "equal_size_masks": 70,
+      "proven_claim_separation": 0.5,
+      "observed_exact_separation": 0.5
+    }
+  ],
+  "adversarial_rank_selector_simulation": {
+    "K": 5,
+    "n": 19,
+    "candidates": 32,
+    "calibrations": 30000,
+    "lower": 0.6231490873266383,
+    "upper": 0.9969240877781831,
+    "lower_tail_rate": 0.0394,
+    "upper_tail_rate": 0.0146,
+    "theoretical_each_tail_upper_bound": 0.05
+  },
+  "out_of_experiment_domain_probes": {
+    "infinite_threshold_continuum_result": {
+      "lower": 0.0,
+      "epsilon": 1e-05,
+      "net_size": 100001
+    },
+    "infinite_threshold_correct_coverage": 1.0,
+    "tiny_slope_cdf": [
+      {
+        "q": 0.5,
+        "slope": 1e-12,
+        "implementation": 0.49998893913993925,
+        "reference": 0.5
+      },
+      {
+        "q": 0.5,
+        "slope": 1e-16,
+        "implementation": 0.5551115123125783,
+        "reference": 0.5
+      },
+      {
+        "q": 0.5,
+        "slope": 1e-20,
+        "implementation": 0.0,
+        "reference": 0.5
+      },
+      {
+        "q": 0.9,
+        "slope": 1e-12,
+        "implementation": 0.8999745393367675,
+        "reference": 0.9
+      },
+      {
+        "q": 0.9,
+        "slope": 1e-16,
+        "implementation": 1.0,
+        "reference": 0.9
+      },
+      {
+        "q": 0.9,
+        "slope": 1e-20,
+        "implementation": 0.0,
+        "reference": 0.9
+      }
+    ]
+  }
+}

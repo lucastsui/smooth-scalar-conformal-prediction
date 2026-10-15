@@ -1,0 +1,43 @@
+{
+  "files": {
+    "algorithm.sty": true,
+    "algorithmic.sty": true,
+    "fancyhdr.sty": true,
+    "figures/certificates.pdf": true,
+    "figures/certificates.png": true,
+    "figures/occupancy.pdf": true,
+    "figures/occupancy.png": true,
+    "figures/shattering.pdf": true,
+    "figures/shattering.png": true,
+    "generated/all_occupancy_table.tex": true,
+    "generated/figure_sources.json": true,
+    "generated/linear_table.tex": true,
+    "generated/occupancy_table.tex": true,
+    "generated/values.json": true,
+    "generated/values.tex": true,
+    "icml2026.bst": true,
+    "icml2026.sty": true,
+    "main.pdf": true,
+    "main.tex": true,
+    "main.txt": true,
+    "references.bib": true
+  },
+  "external_evidence": {
+    "configs/confirmatory.json": true,
+    "results/confirmatory/run_manifest.json": true,
+    "results/revision1_reproduction/comparison.json": true,
+    "src/core.py": true,
+    "src/experiments.py": true,
+    "src/test_core.py": true,
+    "src/make_artifacts.py": true
+  },
+  "extra_unmanifested_files": [],
+  "figure_sources": {
+    "results/confirmatory/occupancy_summary.csv": true,
+    "results/confirmatory/linear_summary.csv": true,
+    "results/confirmatory/run_manifest.json": true,
+    "results/pilot.json": true,
+    "src/make_artifacts.py": true,
+    "src/core.py": true
+  }
+}

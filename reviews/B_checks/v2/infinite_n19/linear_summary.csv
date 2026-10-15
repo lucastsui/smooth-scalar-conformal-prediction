@@ -1,0 +1,2 @@
+n,a,repetitions,grid_size,mean,se,ci_low,ci_high,fixed_mean,finite_beta_lower,dkw_lower,continuum_lower,net_epsilon,net_size,finite_violation_rate,continuum_violation_rate,raw_file,data_sha256,seconds
+19,1.0,5,7,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1,0.0,0.0,linear_n19_a1.npz,18e45e0e58450e2509da034999b184c2224eeca21e0ed4b9dc20eec53e16dcce,0.00036116689443588257

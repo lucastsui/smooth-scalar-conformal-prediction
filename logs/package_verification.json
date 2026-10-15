@@ -1,0 +1,12 @@
+{
+  "occupancy_rows_checked": 84,
+  "linear_rows_checked": 6,
+  "references_checked": 9,
+  "pdf_pages": 10,
+  "main_body_page_upper_bound": 7,
+  "impact_statement_page": 7,
+  "pdf_bytes": 326249,
+  "pdf_sha256": "96b32fe1b039fbd590364027a2cf3858b71ce2f246c2afb444f7dde40a387b46",
+  "numeric_and_citation_checks_pass": true,
+  "note": "Programmatic verification supplements visual page inspection; it does not verify mathematical novelty or proofs."
+}

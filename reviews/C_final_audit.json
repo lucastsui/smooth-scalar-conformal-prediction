@@ -1,0 +1,76 @@
+{
+  "final_hashes": {
+    "algorithm.sty": true,
+    "algorithmic.sty": true,
+    "fancyhdr.sty": true,
+    "figures/certificates.pdf": true,
+    "figures/certificates.png": true,
+    "figures/occupancy.pdf": true,
+    "figures/occupancy.png": true,
+    "figures/shattering.pdf": true,
+    "figures/shattering.png": true,
+    "generated/all_occupancy_table.tex": true,
+    "generated/figure_sources.json": true,
+    "generated/linear_table.tex": true,
+    "generated/occupancy_table.tex": true,
+    "generated/values.json": true,
+    "generated/values.tex": true,
+    "icml2026.bst": true,
+    "icml2026.sty": true,
+    "main.pdf": true,
+    "main.tex": true,
+    "main.txt": true,
+    "references.bib": true
+  },
+  "file_set_matches_v2": true,
+  "changed_files_vs_v2": [
+    "main.pdf",
+    "main.tex",
+    "main.txt"
+  ],
+  "external_evidence_manifest_equal": true,
+  "external_evidence_matches": {
+    "configs/confirmatory.json": true,
+    "results/confirmatory/run_manifest.json": true,
+    "results/revision1_reproduction/comparison.json": true,
+    "src/core.py": true,
+    "src/experiments.py": true,
+    "src/test_core.py": true,
+    "src/make_artifacts.py": true
+  },
+  "pages_v2": 10,
+  "pages_final": 10,
+  "pages_with_text_change": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "recorded_tex_diff_exact": true,
+  "figure_source_inputs_match": {
+    "results/confirmatory/occupancy_summary.csv": true,
+    "results/confirmatory/linear_summary.csv": true,
+    "results/confirmatory/run_manifest.json": true,
+    "results/pilot.json": true,
+    "src/make_artifacts.py": true,
+    "src/core.py": true
+  },
+  "unchanged_pages_pixel_identical": {
+    "1": true,
+    "10": true
+  },
+  "pages_visually_inspected_in_final_pass": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

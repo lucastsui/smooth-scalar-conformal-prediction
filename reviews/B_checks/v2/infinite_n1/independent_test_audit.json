@@ -1,0 +1,26 @@
+{
+  "seed": 20260930,
+  "n": 1,
+  "K": 8,
+  "repetitions": 5,
+  "test_points_per_repetition": 17,
+  "theory": 1.0,
+  "empirical": {
+    "mean": 1.0,
+    "se": 0.0,
+    "ci_low": 1.0,
+    "ci_high": 1.0
+  },
+  "conditional": {
+    "mean": 1.0,
+    "se": 0.0,
+    "ci_low": 1.0,
+    "ci_high": 1.0
+  },
+  "paired_difference": {
+    "mean": 0.0,
+    "se": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0
+  }
+}

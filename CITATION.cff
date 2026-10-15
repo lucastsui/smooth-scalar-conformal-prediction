@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript when using this research."
+type: article
+title: "Limits of Smooth Scalar Tuning in Split Conformal Prediction"
+authors:
+  - family-names: "Tsui"
+    given-names: "Ming Leong"
+    affiliation: "Boston University"
+year: 2026
+date-released: 2026-10-15
+url: "https://github.com/lucastsui/smooth-scalar-conformal-prediction"
+keywords:
+  - conformal prediction
+  - calibration
+  - model selection
+  - statistical complexity

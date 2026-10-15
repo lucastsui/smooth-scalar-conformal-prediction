@@ -1,0 +1,233 @@
+{
+  "npz": {
+    "independent_test_audit.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "linear_n199_a0.25.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "linear_n199_a1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "linear_n49_a0.25.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "linear_n49_a1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "linear_n999_a0.25.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "linear_n999_a1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n19_K128_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n19_K16_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n19_K1900_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n19_K190_a0.05.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n19_K190_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n19_K19_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n3_K1_a0.5.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n3_K8_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n3_K8_a0.5.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n499_K128_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n499_K16_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n499_K49900_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n499_K4990_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n499_K499_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n99_K10000_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n99_K128_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n99_K16_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n99_K9900_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n99_K990_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n99_K990_a0.2.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    },
+    "occupancy_n99_K99_a0.1.npz": {
+      "keys": [
+        "values",
+        "columns"
+      ],
+      "equal": true
+    }
+  },
+  "csv": {
+    "linear_summary.csv": {
+      "rows": 6,
+      "excluded": [
+        "seconds"
+      ],
+      "equal": true
+    },
+    "occupancy_summary.csv": {
+      "rows": 84,
+      "excluded": [
+        "case_seconds"
+      ],
+      "equal": true
+    }
+  },
+  "source_matches": {
+    "pilot.py": true,
+    "test_core.py": true,
+    "core.py": true,
+    "experiments.py": true,
+    "fetch_literature.py": true
+  },
+  "frozen_matches": {
+    "main.pdf": true,
+    "references.bib": true,
+    "main.tex": true,
+    "main.txt": true
+  },
+  "config_matches": true,
+  "audit_json_equal": true,
+  "runtime_seconds": 10.63660441711545,
+  "npz_count": 28
+}

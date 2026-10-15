@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "seed": 73190421,
+  "alpha": 0.1,
+  "repetitions": 10000,
+  "n_values": [19, 99, 499],
+  "K_ratios": [1, 10, 100],
+  "fixed_K_values": [16, 128],
+  "extra_cases": [[99, 10000]],
+  "boundary_cases": [[3, 1, 0.5], [3, 8, 0.5], [3, 8, 0.1], [19, 190, 0.05], [99, 990, 0.2]],
+  "linear": {
+    "seed": 972041,
+    "repetitions": 1000,
+    "n_values": [49, 199, 999],
+    "a_values": [0.25, 1.0],
+    "grid_size": 257,
+    "delta": 0.05
+  },
+  "test_audit": {"seed": 971144, "n": 99, "K": 10000, "repetitions": 1000, "test_points_per_repetition": 1000}
+}

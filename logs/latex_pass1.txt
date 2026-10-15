@@ -1,0 +1,235 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/microtype-pdftex.d
+ef) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/microtype.cfg)
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.
+sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/gettitlestring/gettitlestr
+ing.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)
+)) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
+k.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/uniquecounter/uniquecounte
+r.sty))) (./icml2026.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/times.sty)
+(./fancyhdr.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(./algorithm.sty
+Document Style `algorithm' - floating environment
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/ifthen.sty))
+(./algorithmic.sty
+Document Style `algorithmic' - environment
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/calc.sty))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/forloop/forloop.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(./generated/values.tex)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
+ef) (./main.aux)
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 29.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+(/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
+ty (/usr/local/texlive/2025basic/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+)) (./main.out) (./main.out)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+
+Package hyperref Warning: Ignoring empty anchor on input line 38.
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/omsptm.fd)
+
+Package natbib Warning: Citation `yang2025' on page 1 undefined on input line 4
+6.
+
+
+Package natbib Warning: Citation `liang2026' on page 1 undefined on input line 
+46.
+
+
+Package natbib Warning: Citation `zeng2025' on page 1 undefined on input line 5
+0.
+
+
+Package natbib Warning: Citation `crc2024' on page 1 undefined on input line 52
+.
+
+[1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/
+usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+
+Package natbib Warning: Citation `yang2025' on page 2 undefined on input line 6
+6.
+
+
+Package natbib Warning: Citation `liang2026' on page 2 undefined on input line 
+66.
+
+
+Package natbib Warning: Citation `vovk2012' on page 2 undefined on input line 6
+9.
+
+
+Package natbib Warning: Citation `kiyani2024' on page 2 undefined on input line
+ 69.
+
+
+Package natbib Warning: Citation `crc2024' on page 2 undefined on input line 72
+.
+
+
+Package natbib Warning: Citation `angelopoulos2026' on page 2 undefined on inpu
+t line 72.
+
+
+Package natbib Warning: Citation `aldirawi2026' on page 2 undefined on input li
+ne 72.
+
+
+Overfull \hbox (7.08502pt too wide) detected at line 97
+[][][][]\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; y\OT1/cmr/m/n/
+10 ) = \OML/cmm/m/it/10 a[] [] ;  a[] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 :
+
+LaTeX Warning: Reference `app:smooth' on page 2 undefined on input line 104.
+
+[2]
+
+LaTeX Warning: Reference `app:implementation' on page 3 undefined on input line
+ 133.
+
+
+Package natbib Warning: Citation `zeng2025' on page 3 undefined on input line 1
+71.
+
+[3] [4 <./figures/occupancy.pdf>]
+
+LaTeX Warning: Reference `app:full' on page 5 undefined on input line 225.
+
+(./generated/occupancy_table.tex)
+Underfull \hbox (badness 1430) in paragraph at lines 243--244
+\OT1/ptm/m/n/10 (+20) ob-ser-va-tions for each of 1,000 new cal-i-bra-tion sam-
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 243--244
+\OT1/ptm/m/n/10 (+20) ples in that se-vere set-ting. Em-pir-i-cal cov-er-age wa
+s
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+
+LaTeX Warning: Reference `app:implementation' on page 5 undefined on input line
+ 251.
+
+
+Package natbib Warning: Citation `zeng2025' on page 5 undefined on input line 2
+66.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [5]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [6 <./figu
+res/certificates.pdf>] (./main.bbl) [7]
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/ot1pcr.fd) [8]
+(./generated/all_occupancy_table.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./generated/linear_table.tex)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <./figures/shattering.pdf>]
+
+Package natbib Warning: There were undefined citations.
+
+[10] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</usr/local/texlive/2025bas
+ic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></usr/local/texliv
+e/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
+xlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/loca
+l/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
+fb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025basic/texmf-dist/fon
+ts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/
+times/utmri8a.pfb>
+Output written on main.pdf (10 pages, 311858 bytes).
+Transcript written on main.log.

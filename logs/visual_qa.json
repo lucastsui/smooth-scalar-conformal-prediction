@@ -1,0 +1,27 @@
+{
+  "pdf": "output/pdf/manuscript.pdf",
+  "sha256": "96b32fe1b039fbd590364027a2cf3858b71ce2f246c2afb444f7dde40a387b46",
+  "render_command": "pdftoppm -r 110 -png output/pdf/manuscript.pdf tmp/pdfs/final",
+  "pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "main_body_ends_page": 6,
+  "remaining_pages": "Impact/disclosure/references: 7; appendices: 8\u201310",
+  "checks": [
+    "No clipped text, equations or tables",
+    "No figure legend/data overlap",
+    "All linear table coverage/certificate units are percent",
+    "No missing-reference or author-template errors",
+    "Conclusion orphan removed"
+  ],
+  "reviewer": "Root AI researcher; visual inspection, not human validation"
+}

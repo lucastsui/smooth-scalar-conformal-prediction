@@ -1,0 +1,9 @@
+{
+  "SevereMean": "0.8863",
+  "SevereTheory": "0.8866",
+  "SevereCI": "0.0006",
+  "SevereFixed": "89.9700",
+  "SevereSplit": "90.1919",
+  "NumOccupancyCases": "21",
+  "RunSeconds": "10.88"
+}

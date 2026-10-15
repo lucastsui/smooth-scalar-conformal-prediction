@@ -1,0 +1,36 @@
+{
+  "frozen_utc": "2026-09-28T13:36:56.392737+00:00",
+  "files": {
+    "algorithm.sty": "93fd0eb31c112eb405833db8f1d7f5d238c7e691b1c05680d7276e68f36d564a",
+    "algorithmic.sty": "48d18794a5d97c0479a588cc2eac0917992feb9da83acc4631b8f55757d80f9b",
+    "fancyhdr.sty": "9130c52f91087abc6d223164ffa587e207e3257fcbcd069ef09ecb5391043f14",
+    "figures/certificates.pdf": "f07b79ab5d97bf8bd4063a83c29ec283472df105b5235e62729291ef38295a5f",
+    "figures/certificates.png": "7765f1c7d054be1c651ec359cead67abb8366f136dc99ceac3cbd84323717be2",
+    "figures/occupancy.pdf": "699f71d8b9757761803946c35bbd5eb974e8a3056613d462594e8f2535abcf60",
+    "figures/occupancy.png": "765d03b8d3148ce153192878fcb5839b709fdea9abb04a50078f6fed7fdb633a",
+    "figures/shattering.pdf": "5dac373710ca59d91fcc6d4a1d8519dcf3c261536547ca7776c35ca63d35efba",
+    "figures/shattering.png": "48e93d281c699430b37e74963f2f7ee0135c799e45eab24762acf0fbc60a4d1d",
+    "generated/all_occupancy_table.tex": "9b7caae11e792845342db2e4fb9b8d5260dc8e2c0ec9aed522a54a5c2b705b37",
+    "generated/figure_sources.json": "68b80d2dffb6e45a6148379d72d99c26d19bf906a39f593c0bf4feea852e0bc3",
+    "generated/linear_table.tex": "3676bfc728ddcf18f6a117b6fb7d4ac61820a2fac6a513d9117bafefdc7078d3",
+    "generated/occupancy_table.tex": "714bbac934aafcfc5f01049548c8e672007d30103faede777d40627b9d053f1e",
+    "generated/values.json": "6bc04546344bcb095ff42e7920eb0c6dbe5d0731d906d49658d9b750ccda68be",
+    "generated/values.tex": "4bae9395bfc346b69f2a4ce012bf3ef64a0c1ec834735fc70da787349e17ce07",
+    "icml2026.bst": "0ec3d5eb9b02efb7e0b44a32f3775882f42a743d0bdc618f34e6936309b98764",
+    "icml2026.sty": "7cdcf90f6a59c5219e7f15c88f7ed09fcaf598dad91e6cdddc4dc3cb0e397a95",
+    "main.pdf": "96b32fe1b039fbd590364027a2cf3858b71ce2f246c2afb444f7dde40a387b46",
+    "main.tex": "e0d7229293c1b030ca8b97d7ce69fd63ff26c9f91e4a375ec57236f9360bfbad",
+    "main.txt": "ffa77bbed2706eb29e2d977740958fb9a86788482fe8fface026fc8ae9ac4c77",
+    "references.bib": "11a4cb8043b8b41f60392775a57b12860e4e0f2671b92f2336b191619873463b"
+  },
+  "external_evidence_sha256": {
+    "configs/confirmatory.json": "004ab51f1e597f6b0dc83cb374a5f989fcaf52d1a44ee228bed670c119ab0b85",
+    "results/confirmatory/run_manifest.json": "8f733a787538b29afc96b72e2b98b302e192760f141fabb74a90daa2b385d4f8",
+    "results/revision1_reproduction/comparison.json": "d8950d1c9cf64fd0da289fa71ff9170a52b5b2c7b13691ae51d5dc2134df944e",
+    "src/core.py": "f27fb68ad78f50271bd12003643b161c75aa00f2242d57d6cb5ab251404d478d",
+    "src/experiments.py": "0ef5da610c263257d813387ce6bd8477cb5e9dbd8c8bb2e97911d94ddf364637",
+    "src/test_core.py": "e7df8e82e67e8415c1e3c4de6cdf517f7364312f21b143dc43389d55e59bede9",
+    "src/make_artifacts.py": "247e0063abcccc0d578dbfb6bc1a48d5d49fb1a47d406562757bd539c8038550"
+  },
+  "note": "Complete manuscript dependency snapshot; external evidence is supplied in the parent research package. Manifest does not hash itself."
+}

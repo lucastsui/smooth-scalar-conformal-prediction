@@ -1,0 +1,43 @@
+{
+  "frozen_files_unchanged": {
+    "algorithm.sty": true,
+    "algorithmic.sty": true,
+    "fancyhdr.sty": true,
+    "figures/certificates.pdf": true,
+    "figures/certificates.png": true,
+    "figures/occupancy.pdf": true,
+    "figures/occupancy.png": true,
+    "figures/shattering.pdf": true,
+    "figures/shattering.png": true,
+    "generated/all_occupancy_table.tex": true,
+    "generated/figure_sources.json": true,
+    "generated/linear_table.tex": true,
+    "generated/occupancy_table.tex": true,
+    "generated/values.json": true,
+    "generated/values.tex": true,
+    "icml2026.bst": true,
+    "icml2026.sty": true,
+    "main.pdf": true,
+    "main.tex": true,
+    "main.txt": true,
+    "references.bib": true
+  },
+  "copied_builder_sha256": "816acee53914bb0f1bdec7c5529070daa84e178b5caeedea9c6cd9bca5ae03c0",
+  "current_builder_sha256": "816acee53914bb0f1bdec7c5529070daa84e178b5caeedea9c6cd9bca5ae03c0",
+  "text_identical": true,
+  "rebuilt_pdf_sha256": "f6fe88208692586fc469c206b09393bfc7ffcfd77bb738c5442b83e974fc38a7",
+  "scientific_source_files_identical": true,
+  "rendered_page_count": 10,
+  "rendered_pages_pixel_identical": {
+    "page-01.png": true,
+    "page-02.png": true,
+    "page-03.png": true,
+    "page-04.png": true,
+    "page-05.png": true,
+    "page-06.png": true,
+    "page-07.png": true,
+    "page-08.png": true,
+    "page-09.png": true,
+    "page-10.png": true
+  }
+}

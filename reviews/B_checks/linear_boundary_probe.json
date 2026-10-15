@@ -1,0 +1,7 @@
+{
+  "call": "experiments.linear: n=3, alpha=.1, a=1, repetitions=1, grid_size=257",
+  "exception": "ValueError",
+  "message": "kth(=3) out of bounds (3)",
+  "k": 4,
+  "effect_on_frozen_settings": "None; all six frozen linear cases have k <= n."
+}

@@ -1,0 +1,166 @@
+{
+  "manifest_checks": {
+    "frozen_v2/algorithm.sty": true,
+    "frozen_v2/algorithmic.sty": true,
+    "frozen_v2/fancyhdr.sty": true,
+    "frozen_v2/figures/certificates.pdf": true,
+    "frozen_v2/figures/certificates.png": true,
+    "frozen_v2/figures/occupancy.pdf": true,
+    "frozen_v2/figures/occupancy.png": true,
+    "frozen_v2/figures/shattering.pdf": true,
+    "frozen_v2/figures/shattering.png": true,
+    "frozen_v2/generated/all_occupancy_table.tex": true,
+    "frozen_v2/generated/figure_sources.json": true,
+    "frozen_v2/generated/linear_table.tex": true,
+    "frozen_v2/generated/occupancy_table.tex": true,
+    "frozen_v2/generated/values.json": true,
+    "frozen_v2/generated/values.tex": true,
+    "frozen_v2/icml2026.bst": true,
+    "frozen_v2/icml2026.sty": true,
+    "frozen_v2/main.pdf": true,
+    "frozen_v2/main.tex": true,
+    "frozen_v2/main.txt": true,
+    "frozen_v2/references.bib": true,
+    "configs/confirmatory.json": true,
+    "results/confirmatory/run_manifest.json": true,
+    "results/revision1_reproduction/comparison.json": true,
+    "src/core.py": true,
+    "src/experiments.py": true,
+    "src/test_core.py": true,
+    "src/make_artifacts.py": true
+  },
+  "original_source_archive_matches": {
+    "pilot.py": true,
+    "test_core.py": true,
+    "core.py": true,
+    "experiments.py": true,
+    "fetch_literature.py": true
+  },
+  "B1_original_counterexamples": [
+    {
+      "q": 0.5,
+      "slope": 1e-12,
+      "revised": 0.5,
+      "reference": 0.5
+    },
+    {
+      "q": 0.5,
+      "slope": 1e-16,
+      "revised": 0.5,
+      "reference": 0.5
+    },
+    {
+      "q": 0.5,
+      "slope": 1e-20,
+      "revised": 0.5,
+      "reference": 0.5
+    },
+    {
+      "q": 0.9,
+      "slope": 1e-12,
+      "revised": 0.9,
+      "reference": 0.9
+    },
+    {
+      "q": 0.9,
+      "slope": 1e-16,
+      "revised": 0.9,
+      "reference": 0.9
+    },
+    {
+      "q": 0.9,
+      "slope": 1e-20,
+      "revised": 0.9,
+      "reference": 0.9
+    }
+  ],
+  "piecewise_CDF_stress": {
+    "evaluations": 1742,
+    "max_error_against_independent_integral": 1.1102230246251565e-16,
+    "slope_magnitudes": [
+      0,
+      1e-24,
+      1e-20,
+      1e-16,
+      1e-12,
+      1e-08,
+      0.001,
+      0.25,
+      0.5,
+      1,
+      2,
+      1000000.0,
+      1000000000000.0
+    ]
+  },
+  "original_to_revised_raw_max_differences": {
+    "independent_test_audit.npz": 0.0,
+    "linear_n199_a0.25.npz": 6.772360450213455e-15,
+    "linear_n199_a1.npz": 3.4416913763379853e-15,
+    "linear_n49_a0.25.npz": 9.103828801926284e-15,
+    "linear_n49_a1.npz": 2.3314683517128287e-15,
+    "linear_n999_a0.25.npz": 9.547918011776346e-15,
+    "linear_n999_a1.npz": 2.3314683517128287e-15,
+    "occupancy_n19_K128_a0.1.npz": 0.0,
+    "occupancy_n19_K16_a0.1.npz": 0.0,
+    "occupancy_n19_K1900_a0.1.npz": 0.0,
+    "occupancy_n19_K190_a0.05.npz": 0.0,
+    "occupancy_n19_K190_a0.1.npz": 0.0,
+    "occupancy_n19_K19_a0.1.npz": 0.0,
+    "occupancy_n3_K1_a0.5.npz": 0.0,
+    "occupancy_n3_K8_a0.1.npz": 0.0,
+    "occupancy_n3_K8_a0.5.npz": 0.0,
+    "occupancy_n499_K128_a0.1.npz": 0.0,
+    "occupancy_n499_K16_a0.1.npz": 0.0,
+    "occupancy_n499_K49900_a0.1.npz": 0.0,
+    "occupancy_n499_K4990_a0.1.npz": 0.0,
+    "occupancy_n499_K499_a0.1.npz": 0.0,
+    "occupancy_n99_K10000_a0.1.npz": 0.0,
+    "occupancy_n99_K128_a0.1.npz": 0.0,
+    "occupancy_n99_K16_a0.1.npz": 0.0,
+    "occupancy_n99_K9900_a0.1.npz": 0.0,
+    "occupancy_n99_K990_a0.1.npz": 0.0,
+    "occupancy_n99_K990_a0.2.npz": 0.0,
+    "occupancy_n99_K99_a0.1.npz": 0.0
+  },
+  "max_raw_difference": 9.547918011776346e-15,
+  "max_revised_linear_CDF_reference_error": 3.3306690738754696e-16,
+  "reexecuted_linear_arrays_identical": {
+    "linear_n199_a0.25.npz": true,
+    "linear_n199_a1.npz": true,
+    "linear_n49_a0.25.npz": true,
+    "linear_n49_a1.npz": true,
+    "linear_n999_a0.25.npz": true,
+    "linear_n999_a1.npz": true
+  },
+  "B2_infinite_threshold_execution": [
+    {
+      "n": 1,
+      "alpha": 0.01,
+      "k": 2,
+      "all_coverages_one": true,
+      "all_certificates_one": true
+    },
+    {
+      "n": 3,
+      "alpha": 0.01,
+      "k": 4,
+      "all_coverages_one": true,
+      "all_certificates_one": true
+    },
+    {
+      "n": 19,
+      "alpha": 0.01,
+      "k": 20,
+      "all_coverages_one": true,
+      "all_certificates_one": true
+    }
+  ],
+  "quantile_sandwich_tie_stress": {
+    "arrays": 791,
+    "arrays_with_ties": 760,
+    "quantiles": 4620,
+    "minimum_slack": 0.0,
+    "violations": 0
+  }
+}

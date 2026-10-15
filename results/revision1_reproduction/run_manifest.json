@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-09-28T13:23:37.041643+00:00",
+  "config_sha256": "004ab51f1e597f6b0dc83cb374a5f989fcaf52d1a44ee228bed670c119ab0b85",
+  "python": "3.12.12",
+  "numpy": "2.5.3",
+  "git_commit": "02b4f3ef1a20e0f35e344a9b10eeef871bdbdb78",
+  "source_sha256": {
+    "pilot.py": "08ac754fb32e33bac7ec57ea984406342b844a9576c4ae4c013b6a7b4027c0a4",
+    "verify_package.py": "c8bcf8ca00d34d99fbd213416a6670b7b6f92e563a58d13a5e5db7d1d8a391a0",
+    "reproduce.py": "551eabb7b8fa16b4f0f79e0fceb4960bbc87836217a0a185a34efcafa2adda9c",
+    "test_core.py": "e7df8e82e67e8415c1e3c4de6cdf517f7364312f21b143dc43389d55e59bede9",
+    "build_paper.py": "816acee53914bb0f1bdec7c5529070daa84e178b5caeedea9c6cd9bca5ae03c0",
+    "core.py": "f27fb68ad78f50271bd12003643b161c75aa00f2242d57d6cb5ab251404d478d",
+    "make_artifacts.py": "4baf7ae889c888a34c764918b4a1465c66d501b35b1e051ba18582d0477b2596",
+    "experiments.py": "0ef5da610c263257d813387ce6bd8477cb5e9dbd8c8bb2e97911d94ddf364637",
+    "fetch_literature.py": "eef239c2757c7d9c9fa4db9ee35ec31a26cfbc25eef61c34afe13d9201407c43"
+  },
+  "elapsed_seconds": 10.996077041141689,
+  "finished_utc": "2026-09-28T13:23:48.037664+00:00"
+}

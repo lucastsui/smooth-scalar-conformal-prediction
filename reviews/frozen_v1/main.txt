@@ -1,0 +1,756 @@
+000
+001
+002                 Limits of Smooth Scalar Tuning in Split Conformal Prediction
+003
+004
+005
+006                                                       Anonymous Authors1
+007
+008
+009                            Abstract                                     A tempting justification for data reuse is that only a small
+010                                                                         number of parameters are tuned. Statistical complexity,
+011        Reusing calibration data to tune a conformal score               however, belongs to the induced functions and decisions, not
+012        can reduce coverage. Does tuning a single smooth                 to the number of coordinates used to describe them. Even a
+013        parameter make this effect small? We construct a                 scalar may index many different orderings. Smoothness of
+014        compact scalar family of bounded, infinitely dif-                the raw score also needs interpretation: multiplying every
+015        ferentiable, 1-Lipschitz scores with continuous                  score by a small positive constant decreases its Lipschitz
+016        score distributions for which ordinary recalibra-                constant without changing any conformal prediction set.
+017        tion has arbitrarily small finite-sample coverage.
+           The construction encodes label subsets and gives                 This distinction is relevant to a specific published argument.
+018
+           an exact occupancy formula; it requires increas-                 Zeng et al. (2025) propose a parameter-dimensional bound
+019
+           ing parameter precision, so it is a worst-case re-               on tuning bias. In their published appendix, Lemmas D.3
+020
+           sult rather than a model of ordinary temperature                 and D.5 infer bounds on the VC dimension of score sub-
+021
+           scaling. At nominal 90% coverage, a specified                    level sets from bounded continuity in the parameters. That
+022
+           case gives 0.8863% in 10,000 calibration repe-                   implication is not valid in general. Our construction gives
+023
+           titions, versus 0.8866% analytically. We then                    an explicit counterexample satisfying stronger smoothness
+024
+           express a sufficient condition through covering                  assumptions. This observation concerns the general argu-
+025
+           numbers of population-transformed scores, using                  ment; it does not challenge the numerical measurements for
+026
+           classical beta order statistics. Raw-score Lips-                 the particular calibrators evaluated in that work.
+027
+028        chitzness transfers to this condition when com-                  The general possibility of severe adaptive failure is already
+029        bined with anti-concentration. Every fixed com-                  known. For example, Angelopoulos et al. (2024) show that
+030        pact, bounded, Lipschitz family with atomless                    conformal risk control can fail arbitrarily badly for non-
+031        scores is consequently consistent, despite the ab-               monotone losses. Our question is narrower: what happens
+032        sence of a uniform dimension-only rate across                    when a smooth score family is selected and then recalibrated
+033        such families. The contribution clarifies the as-                by an ordinary split-conformal quantile, with no ties in
+034        sumptions behind adaptive calibration guarantees;                any fixed score distribution? We obtain an exact answer
+035        it does not introduce a practical replacement for                for a finite-label construction, and connect it to conditions
+036        valid post-selection methods.                                    sufficient for consistency.
+037
+                                                                            The resulting contributions are:
+038
+039   1. Introduction                                                         1. A compact, smooth, 1-Lipschitz scalar construction
+040
+      Split conformal prediction converts a score into a predic-                 with exact coverage cn [1 − (1 − 1/K)n ], where cn
+041
+      tion set using a calibration order statistic. Its finite-sample            is fixed-score conformal coverage and K is the label-
+042
+      guarantee applies when the score is fixed independently of                 universe size.
+043
+044   the calibration data. Choosing the score using those same               2. An exponential lower bound on a covering number
+045   observations changes the problem: the selected order statis-               of its population score ranks, showing why the raw
+046   tic can be systematically optimistic. This is an established               Lipschitz bound hides substantial complexity.
+047   model-selection issue, with existing remedies and quantita-
+      tive bounds (Yang & Kuchibhotla, 2025; Liang et al., 2026).             3. A beta-tail covering certificate and a fixed-family con-
+048
+                                                                                 sistency corollary. These synthesize classical order-
+049     1
+          Anonymous Institution, Anonymous City, Anonymous Region,               statistic and covering arguments; they are not presented
+050   Anonymous Country. Correspondence to: Anonymous Author
+      <anon.email@domain.com>.
+                                                                                 as new general concentration principles.
+051
+052                                                                         The examples are intentionally constructed. In particular,
+      Local research draft, September 28, 2026. Not submitted. Uses
+053   the ICML 2026 template provisionally.                                 one scalar encodes 2K alternatives, and large-K evaluation
+054
+                                                                        1
+                                        Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+055   uses an equivalent exact mask representation. The paper                 The selector λ̂ may use all calibration observations but not
+056   establishes a limit on universal guarantees, not a prevalence           the test observation. It is measurable. Let Fλ denote the pop-
+057   claim about modern neural-network tuning.                               ulation CDF of Sλ (Z) and write the calibration-conditional
+058                                                                           coverage as
+059   2. Related Work
+060                                                                                 VD = P{Yn+1 ∈ CD (Xn+1 ) | D} = Fλ̂ (qλ̂ ).          (3)
+061   Conformal selection. Yang & Kuchibhotla (2025) ana-
+062   lyze efficiency-first selection using finite-family empirical-          Marginal coverage is EVD . For every fixed λ with contin-
+063   process bounds and validity-first selection using another               uous Fλ , Fλ (qλ ) has the Beta(k, n + 1 − k) distribution
+064   split. Liang et al. (2026) develop valid procedures that in-            and expectation cn . If k = n + 1, the conformal threshold
+065   corporate model selection into the conformal construction.              is +∞ and coverage is one; results involving finite beta
+066   Their efficiency analysis uses class complexity and regular-            parameters below concern k ≤ n.
+067   ity. We study the unmodified reused-calibration rule; we do
+068   not claim that it outperforms their valid procedures. The               4. A Smooth Scalar Counterexample
+069   finite-family part of our certificate is closely related to these
+070   bounds.                                                                 Take X = U ∼ Unif[0, 1] independently of Y ∼
+071                                                                           Unif{0, . . . , K − 1}. Let M = 2K and enumerate sub-
+072                                                                           sets Aj by binary masks j = 0, . . . , M − 1. Their scalar
+      Conditional validity and complexity. The fixed-score
+073                                                                           locations are λj = j/(M − 1). At these locations, we want
+      binomial and beta order-statistic analysis is classical in con-
+074                                                                           scores
+      formal inference (Vovk, 2012). Covering numbers and
+075   anti-concentration also appear together in Kiyani et al.
+                                                                                                                        u
+                                                                                          Sλj (u, y) = aK 1{y ∈/ Aj } +     ,
+076   (2024), who study learned prediction-set thresholds under                                                          4
+077                                                                                                        1                         (4)
+      conditional-coverage requirements. Our certificate instead
+                                                                                                 aK =           .
+078   covers population-transformed scores, applies to an arbi-                                        8(M − 1)
+079   trary measurable selector, and makes invariance to increas-
+080   ing score transformations explicit. It requires population              The common positive factor aK affects neither score rank-
+081   information and is not an estimated certificate.                        ings nor prediction sets.
+082                                                                           To interpolate, define ψ(t) = e−1/t for t > 0, zero other-
+083   Non-monotone risk control. The counterexample in An-                    wise, and
+084   gelopoulos et al. (2024) already rules out unrestricted non-                                          ψ(t)
+085                                                                                            h(t) =                  .             (5)
+      monotone scalar tuning. Recent preprints study stability-                                       ψ(t) + ψ(1 − t)
+086   based guarantees (Angelopoulos, 2026) and finite-grid be-
+087                                                                           On [λj , λj+1 ], interpolate the two membership indicators
+      havior (Aldirawi et al., 2026). Smoothness of a real-valued
+088                                                                           with weight h((M − 1)λ − j) and add u/4, all multiplied
+      score does not imply smoothness of the thresholded mis-
+089                                                                           by aK . Extend constantly beyond the endpoint knots. The
+      coverage loss; thus our example does not contradict results
+090                                                                           function is infinitely differentiable because h is flat at zero
+      that impose regularity on the loss or stability on the selec-
+091                                                                           and one. Moreover, 0 ≤ h ≤ 1 and sup |h′ | ≤ 8 (Ap-
+      tor. The exact occupancy law and its compatibility with
+092                                                                           pendix A). Thus Sλ ∈ [0, 1] and |Sλ (z) − Sµ (z)| ≤ |λ − µ|.
+      smooth atomless scores are the distinctions pursued here. A
+093                                                                           At every parameter, the uniform U term gives an atomless
+      full closest-work matrix and version-specific reading record
+094                                                                           score distribution.
+      accompany the manuscript.
+095                                                                           Theorem 1 (Exact occupancy coverage). For any n, K ≥ 1
+096                                                                           and α ∈ (0, 1) with k ≤ n, the above smooth scalar family
+097   3. Setup                                                                and the selector choosing the knot for
+098   Let Zi = (Xi , Yi ), i = 1, . . . , n + 1, be i.i.d. from P .
+099   The score family {Sλ : λ ∈ Λ} is fixed before observing                                    A(D) = {Y1 , . . . , Yn }               (6)
+100   D = (Z1 , . . . , Zn ); independently trained models may be
+101                                                                           satisfy
+      conditioned on. Write
+102                                                                                                  |A(D)|
+103                                                   k                                       VD =          U(k) ,                       (7)
+               k = ⌈(n + 1)(1 − α)⌉,          cn =       .         (1)                                 K
+104                                                  n+1                                                               n 
+                                                                                                                     1
+105                                                                                         EVD = cn 1 − 1 −                    .        (8)
+      For k ≤ n, let qλ be the kth order statistic of the calibration                                                K
+106
+      scores and define
+107                                                                           Every fixed member of the family instead has marginal cov-
+108              CD (x) = {y : Sλ̂(D) (x, y) ≤ qλ̂(D) }.           (2)        erage cn .
+109
+                                                                          2
+                                        Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+110   Proof. Every calibration label belongs to A(D), so its se-              removes irrelevant raw-score scales from the analysis.
+111   lected score is aK Ui /4 and the threshold is aK U(k) /4. A             Throughout, suprema over z use a common domain on
+112   future label outside A(D) has score at least aK and can-                which the stated uniform bounds hold.
+113   not be included. A label inside is included exactly when
+                                                                              Let Nrank (r) be the smallest size of a deterministic set of
+114   U ≤ U(k) . This proves Equation (7). The set A(D) de-
+                                                                              parameter representatives such that every Rλ is within r
+115   pends only on the labels and is independent of all Ui . Each
+                                                                              in sup norm of a representative. The centers and radius
+116   of the K labels is observed with probability 1−(1−1/K)n ,
+                                                                              must be fixed independently of the calibration sample. This
+117   while EU(k) = cn . Multiplying expectations proves Equa-
+                                                                              population-dependent quantity is used for analysis, not esti-
+118   tion (8). Fixed-score validity follows from its continuous
+                                                                              mated from the reused observations.
+119   score distribution.
+120                                                                           Theorem 2 (Rank-cover certificate). Suppose Nrank (r) ≤
+121   The selector can be expressed as minimizing a fixed loss,               N < ∞. Write Bn,k for the CDF of Beta(k, n + 1 − k).
+122   rather than specifying an adaptive score family. At the knots,          For every measurable selector and u, v ∈ [0, 1],
+123   minimize the number of calibration labels excluded from                            P{VD < u − r} ≤ N Bn,k (u),                    (11)
+124   A plus |A|/(K + 1); assign infinite loss away from the
+125                                                                                      P{VD > v + r} ≤ N [1 − Bn,k (v)].              (12)
+      knots. Including an observed label decreases this loss, and
+126   including an unobserved label increases it. Thus its unique             In particular, for δ ∈ (0, 1), with probability at least 1 − δ
+127   minimizer is A(D). The loss itself is not assumed continu-              over D,
+128
+                                                                                                      h                i
+      ous; this is an unrestricted measurable selection result, not a                          VD ≥ Bn,k −1
+                                                                                                             (δ/N ) − r .               (13)
+129   claim about gradient descent.                                                                                     +
+130
+131   What fails uniformly. By 1 − (1 − 1/K)n ≤ n/K, the                      Proof. Order statistics commute with nondecreasing trans-
+132   marginal coverage is at most cn n/K and can be made arbi-               formations, so Equation (3) is exactly the kth order statistic
+133   trarily small for each fixed n. The coverage decrease relative          of Rλ̂ (Zi ). If two arrays differ by at most r coordinatewise,
+134   to the fixed-score baseline equals                                      their kth order statistics differ by at most r. Therefore, with
+135                                                                           Tj the order statistic for representative j,
+136                   cn − EVD = cn (1 − 1/K)n .                   (9)
+                                                                                           min Tj − r ≤ VD ≤ max Tj + r.                (14)
+137   Consequently no vanishing finite-sample bound depending                              j≤N                    j≤N
+138   only on n, scalar dimension, the common Lipschitz bound                 Each fixed Tj has the beta law. Applying a union bound
+139   and the common score range can hold uniformly over these                proves both tails; the representatives need not be indepen-
+140                              n and then a sufficiently large
+      families. Choosing a large √                                            dent. Inverting the lower-tail bound and using VD ≥ 0 gives
+141   K defeats any universal C/ n bound. This is a statement                 Equation (13).
+142   across families. For each fixed K, Equation (9) tends to
+143   zero.                                                                   For M fixed candidate scores, taking r = 0, N = M
+144
+                                                                              recovers an exact beta-tail union certificate. For a col-
+145   What the scalar hides. The parameter distinguishes 2K                   lection of strictly increasing transformations of one score,
+146   knots; representing all of them requires at least K bits of dis-        N = 1, r = 0: even data-dependent selection cannot change
+147   tinguishability. The construction is neither a one-parameter            the prediction sets. This invariance is already explicit in
+148   computational shortcut nor a realistic model of temperature             Zeng et al. (2025), Lemma D.7. The new role here is its
+149   scaling. Ordinary finite precision restricts the available alter-       inclusion in the same complexity description as the adverse
+150   natives, to which finite-family guarantees apply. At u = 1/2            construction.
+151   and threshold aK /2, the knots realize all 2K subsets of the
+152                                                                           Proposition 3 (Large rank covers in the construction). Let
+      K labels. Hence the threshold class has VC dimension at
+153                                                                           K ≥ 2, m = ⌊K/2⌋ and p = m/K. For the family in
+      least K despite bounded smooth scalar parameterization.
+154                                                                           Theorem 1,
+      Appendix C provides a direct three-label illustration.
+155                                                                                                 
+                                                                                                     K
+156                                                                                   Nrank (r) ≥          whenever r < p/2.        (15)
+      5. Complexity on the Probability Scale                                                         m
+157
+158   For atomless score distributions define the population-                 Proof. Restrict to knots with |A| = m. Their transformed
+159   transformed scores                                                      scores equal pu when y ∈ A, and p + (1 − p)u otherwise.
+160                                                                           For two distinct subsets choose a label in their symmetric
+161                   Rλ (z) = Fλ (Sλ (z)) ∈ [0, 1].              (10)
+                                                                              difference and let u tend to zero. The sup-norm distance is
+162   Each Rλ (Z) is uniform. Transforming a score by any                     at least p. A ball of radius r < p/2 cannot contain two such
+163   strictly increasing function leaves Rλ unchanged. This                  functions, so each requires a distinct cover element.
+164
+                                                                          3
+                                                           Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+165                                       A. One family: fixed label universe                                               B. Different families: K grows with n
+166                        1.0                                                                                  1.0
+167
+168                        0.8                                                                                  0.8
+
+
+
+
+       Marginal coverage                                                                    Marginal coverage
+169
+170                                                                                                                                                              K = 1n
+                           0.6                                                                                  0.6
+                                                                                                                                                                 K = 10n
+171
+                                                                                                                                                                 K = 100n
+172                        0.4                                                                                  0.4
+                                                                                                                                                                 Nominal 0.9
+173
+                                                                              K = 16
+174                        0.2                                                                                  0.2
+                                                                              K = 128
+175                                                                           Nominal 0.9
+176                        0.0                                                                                  0.0
+177                              10   1
+                                                              10   2
+                                                                                                                      101                        102
+178                                             Calibration sample size n                                                            Calibration sample size n
+179
+180   Figure 1. Does the counterexample imply permanent inconsistency? Curves are exact coverage; points are means of 10,000 independent
+181   calibration samples with pointwise 95% Monte Carlo intervals (often smaller than the markers). Left: a fixed family approaches nominal
+182   coverage. Right: choosing a different family as K grows with n preserves substantial loss. All large-K computations evaluate the
+      equivalent knot-mask event, not a floating-point encoding of the scalar.
+183
+184
+185   Thus the rank covering complexity stays exponentially large                                        Corollary 4 (Consistency of each fixed compact family).
+186   in K at a constant radius, even though raw scores have a                                           Let Λ be compact, Sλ ∈ [0, 1], the family uniformly L-
+187   common Lipschitz bound. Shrinking score amplitude does                                             Lipschitz in its parameter, and every Fλ continuous. Hold
+188   not remove the relevant statistical complexity.                                                    the family and P fixed as n → ∞. For fixed α ∈ (0, 1) and
+189                                                                                                      any sequence of measurable selectors,
+190
+      5.1. Sufficient raw-score regularity                                                                                       P
+191                                                                                                                         VD −
+                                                                                                                               → 1 − α,           EVD → 1 − α.             (18)
+192   Suppose ∥Sλ − Sµ ∥∞ ≤ L∥λ − µ∥ and define the uniform
+193   concentration modulus                                                                              Proof. First ω(w) → 0 as w ↓ 0. Otherwise there are
+194                                                                                                      shrinking intervals with nonvanishing probability mass.
+195                              ω(w) = sup P{t < Sλ (Z) ≤ t + w}.                  (16)
+                                              λ,t                                                        Compactness of the parameters and boundedness of the
+196                                                                                                      scores give a convergent subsequence of parameters and
+197   An ϵ-net in parameter space is a rank net of radius                                                interval locations. Uniform Lipschitzness implies that these
+198                                                                                                      events are contained in shrinking neighborhoods of a single
+199                                                 r = ω(2Lϵ).                     (17)
+                                                                                                         limiting score value, contradicting its atomlessness. For any
+200   Indeed, put h = Lϵ. The score bounds give                                                          fixed rank radius r > 0, Equation (17) and compactness now
+201                                                                                                      provide a finite deterministic cover. Each representative’s
+202                              Fµ (Sµ (z) − 2h) ≤ Fλ (Sλ (z))                                          order statistic converges in probability to 1 − α. Apply
+203                                                     ≤ Fµ (Sµ (z) + 2h),                              Equation (14), then let r ↓ 0. Boundedness of coverage
+204                                                                                                      implies convergence of its expectation.
+205   so the difference from Fµ (Sµ (z)) is at most ω(2h). A
+206   common density upper bound B gives the explicit radius
+                                                                                                        This conclusion requires no uniform numerical density
+207   2BLϵ. The product BL is invariant under common posi-
+                                                                                                        bound. Its rate can depend on the family’s concentration
+208   tive score rescaling: a smaller Lipschitz constant is offset
+                                                                                                        modulus and covering numbers. The counterexample rules
+209   by increased density concentration. In the construction, the
+                                                                                                        out replacing that dependence by scalar dimension and raw
+210   uniform-noise intervals have width aK /4, and concentration
+                                                                                                        Lipschitzness alone.
+211   becomes progressively less controlled as K grows.
+212   The certificate can therefore use a parameter-space covering
+213                                                                                                      6. Numerical Checks
+      number NΛ (ϵ) and penalty 2BLϵ. It is an oracle statement:
+214   without justified population bounds on B, L or ω, it does not                                     The proofs support the universal statements. Computation
+215   provide a valid plug-in certificate. Radius selection based                                       checks the construction, quantile indexing, predictions and
+216   only on these known constants and (n, α, δ) may optimize                                          finite-sample formulas. We used a pilot followed by a com-
+217   the deterministic bound; choosing an empirically favorable                                        mitted, fixed protocol with distinct seeds. The code, config-
+218   radius needs a separate argument.                                                                 uration, per-calibration outcomes, input hashes and environ-
+219
+                                                                                            4
+                                       Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+220   ment lock file accompany the paper. No benchmark data or              6.2. A regular family and conservative certificates
+221   trained models were used.
+222                                                                         To examine a family with controlled concentration, take
+223                                                                         Y ∼ Unif[0, 1], X ∼ Unif[−1, 1] independently and
+      6.1. Exact law and coverage-restoring controls
+224                                                                         Sβ (X, Y ) = Y + βX, β ∈ [−a, a]. This family has L = 1
+225   The pilot exhaustively recovered all eight labelings at K =           and score density at most B = 1. For 257 equally spaced
+226   3, then compared direct smooth-score predictions with the             candidate slopes we choose the one with the smallest cal-
+227   mask event for 20,000 test predictions at n = 9, K = 12.              ibration quantile. This selector does not use the known
+228   There were zero disagreements. The pilot’s mean coverage              population CDF; the CDF is used only to evaluate condi-
+229   was 0.48598 (MC SE 0.00200), versus 0.48871 analytically.             tional coverage.
+230   It informed the decision to continue and is excluded from             For a ∈ {0.25, 1} and n ∈ {49, 199, 999}, we ran 1,000
+231   confirmatory estimates.                                               independent repetitions. Besides observed coverage, we
+232   The confirmatory suite contains 21 occupancy settings, each           compute three lower certificates at confidence 1 − δ = 0.95:
+233   with 10,000 independent calibration samples. It crosses               the finite-grid beta bound, the finite-grid DKW bound, and
+234   n ∈ {19, 99, 499} with K ∈ {n, 10n, 100n, 16, 128}, adds              the continuum certificate from Equation (17). The latter
+235   (99, 10000), and checks five boundary/level settings (Ap-             uses an ϵ-net of size ⌈a/ϵ⌉ + 1, rank penalty 2ϵ, and a
+236   pendix D). Main comparisons use α = 0.1. For each sample,             deterministic search over 2,000 radii. Appendix C gives
+237   we evaluate Equation (7) exactly and save the result. Thus            exact formulas.
+238   the uncertainty intervals quantify Monte Carlo error across
+239                                                                         Observed mean coverage ranged from 0.85636 at n =
+      calibration samples, not binomial error from treating all             49, a = 1 to 0.89225 at n = 999, a = 1, approaching
+240   future predictions as independent.
+241                                                                         the fixed-score target 0.9. The continuum certificate ranges
+242   Three controls use the same total observation budget: a               from 0.69526 to 0.86162. It is sometimes stronger and
+243   fixed score, a data-dependent positive affine transformation          sometimes weaker than the finite-grid beta certificate; for
+244   of that score, and disjoint selection/recalibration. The split        example at n = 999, a = 1 it is 0.85755 versus 0.86333.
+245   control selects A on ⌊n/2⌋ points, then calibrates using              Both are stronger than the reported DKW certificate in these
+246   the remaining m = ⌈n/2⌉. Its exact marginal target is                 settings. The empirical fraction of calibration samples be-
+247   min{1, ⌈(m + 1)(1 − α)⌉/(m + 1)}, which need not equal                low the continuum lower certificate is between 0.001 and
+248   0.9. Fixed and monotone controls coincide up to numerical             0.003, well below 0.05, showing conservatism in this exam-
+249   roundoff, as predicted by invariance. There is no tuned               ple rather than tightness. These finite simulations neither
+250   hyperparameter in these comparisons.                                  prove the bounds nor establish their utility for unknown
+251                                                                         distributions.
+      All occupancy settings and all three controls agreed with
+252   their exact means within the fixed diagnostic tolerance of
+253   five MC SE plus 0.001. At n = 99, K = 10000, adaptive                 Implementation and cost. Six verification tests cover
+254   coverage was (0.8863±0.0006)%, compared with 0.8866%                  quantile boundary cases, all masks through K = 6, ex-
+255   exactly. Fixed-score coverage was 89.9700%, and the split             act rational occupancy enumeration, direct predictions and
+256   control gave 90.1919% against its 90.1961% target. Low set            scale invariance, an independent quadrature calculation of
+257   size here is not a benefit: it reflects omitted labels. Since Y       the linear-score CDF, and the beta/binomial identity. They
+258   is uniform and independent of U , expected set size divided           pass. The confirmatory script ran in 10.88 seconds on an
+259   by K equals coverage.                                                 Apple M4 Max CPU with Python 3.12.12; this excludes
+260                                                                         environment setup, literature review, plotting and document
+261   An independently seeded audit drew 1,000 fresh test
+      observations for each of 1,000 new calibration sam-                   preparation. No efficiency comparison or GPU computation
+262                                                                         is claimed. For large K, the code evaluates subset member-
+263   ples in that severe setting. Empirical coverage was
+      0.008858 with a calibration-level 95% Monte Carlo interval            ship and uniform order statistics directly. It does not claim
+264                                                                         to numerically optimize or store all the smooth scalar knots.
+265   [0.008681, 0.009035], consistent with 0.00886648 analyti-
+266   cally. This audit evaluates actual prediction indicators rather
+267   than only the coverage formula.                                       7. Limitations and Implications
+268   Figure 1 also shows the crucial asymptotic qualification. For         The negative example is designed to expose a missing as-
+269   fixed K, increasing n restores coverage. If K/n → c > 0,              sumption. It contains no informative predictor, encodes
+270   the exact law instead approaches (1−α)(1−e−1/c ) because              exponentially many subsets, and needs increasingly fine
+271   the family changes with n.                                            parameter precision. It supplies no evidence that normal
+272                                                                         temperature scaling, standard neural adapters, or ordinary
+273                                                                         hyperparameter grids exhibit near-zero coverage. The ob-
+274
+                                                                        5
+                                                     Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+275   Table 1. Does the exact failure persist after independent recalibration? Coverage in percent; simulation entries are mean ±1.96 MC SE
+      over 10,000 calibration samples. Both adaptive and split procedures use n total points. The split baseline’s calibration subset is smaller.
+276
+      Large-K adaptive entries use the algebraically equivalent mask implementation.
+277
+278                                              n      K     Exact adaptive     Simulated adaptive                                Disjoint split
+279
+280                                       99             16         89.8489          89.8910 ± 0.0608                      90.2201 ± 0.0814
+281                                       99            128         48.5978          48.5264 ± 0.0548                      90.1437 ± 0.0803
+282                                       99            990          8.5687           8.5693 ± 0.0066                      90.1821 ± 0.0809
+283                                       99         10,000          0.8866           0.8863 ± 0.0006                      90.1919 ± 0.0818
+284                                      499            128         88.2031          88.1602 ± 0.0331                      90.0081 ± 0.0372
+285
+286
+                                       Slope range [-0.25, 0.25]                                                               Slope range [-1, 1]
+287
+288                             0.90                                                                              0.90
+
+
+
+
+       Coverage / lower bound                                                            Coverage / lower bound
+289                             0.85                                                                              0.85
+290
+                                0.80                                                                              0.80
+291
+292                             0.75                                                                              0.75
+293                             0.70                              Finite-grid beta                                0.70
+294                                                               Continuum net
+295                             0.65                              Finite-grid DKW                                 0.65
+
+296                                                               Observed mean
+                                0.60                                                                              0.60
+297                                          2                                       3
+                                        10                                      10                                           102                                 103
+298
+                                         Calibration sample size n                                                            Calibration sample size n
+299
+300
+      Figure 2. How informative are the sufficient conditions? Observed means and 95% Monte Carlo intervals are compared with three
+301   95%-confidence lower certificates for the regular linear score family. These are different statistical objects: the curves compare guarantee
+302   conservatism, not three prediction algorithms. No certificate is uniformly best.
+303
+304
+305   servations in Zeng et al. (2025) can hold for their particular                                      8. Conclusion
+306   classes even though a general dimension-only theorem re-
+      quires additional assumptions.                                                                      Smooth scalar score tuning can cause arbitrarily severe
+307
+                                                                                                          finite-sample split-conformal coverage loss across a class
+308
+      The positive result is a sufficient condition for coverage, not                                     of families, with an exact occupancy law in a simple con-
+309
+      an efficient conformal algorithm. Population rank covers                                            struction. The same analysis also identifies a boundary:
+310
+      and uniform concentration bounds are typically unknown.                                             every fixed compact bounded Lipschitz family with atom-
+311
+      Sup-norm covers can also be large or infinite in useful prob-                                       less scores is consistent. Probability-scale covers make this
+312
+      lems, while valid methods based on different arguments                                              distinction explicit and combine with classical beta tails
+313
+      may still exist. The beta union bound ignores dependence                                            to give a finite-sample certificate. Establishing tractable,
+314
+      between representatives and can be conservative. Ties, non-                                         data-driven estimates of the relevant complexity remains
+315
+      i.i.d. data and data-dependent score families without inde-                                         open.
+316
+      pendent training are outside the stated results. Although raw
+317
+      scores are smooth in the construction, the selection objective
+318
+      is deliberately combinatorial.
+                                                                                                          Impact Statement
+319
+      The precise practical lesson is to justify calibration reuse                                       This work concerns the reliability of uncertainty guarantees.
+320
+      using the actual threshold class, a valid selection-aware pro-                                     A potential benefit is preventing unjustified calibration-data
+321
+      cedure, independent recalibration, or an appropriate stability                                     reuse. A potential misuse is to interpret a deliberately ad-
+322
+      argument. Merely counting tunable coordinates or reporting                                         versarial construction as evidence that all low-dimensional
+323
+      a small raw-score derivative does not supply such a jus-                                           calibration fails, or to treat an oracle certificate with esti-
+324
+      tification. Determining whether the specific strengthened                                          mated constants as automatically valid. We explicitly limit
+325
+      counterexample and synthesis warrant a full conference                                             both interpretations. Experiments use synthetic data only.
+326
+      contribution requires external expert assessment.                                                  No personal data, human participants, or deployed decision
+327
+                                                                                                         system is involved.
+328
+329
+                                                                                         6
+                                      Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+330   Research Process Disclosure                                         Zeng, H., Liu, K., Jing, B., and Wei, H. Parametric
+331                                                                         scaling law of tuning bias in conformal prediction. In
+332   This local draft was developed with autonomous AI as-                 Proceedings of the 42nd International Conference on
+333   sistance for literature search, derivations, implementation,          Machine Learning, volume 267 of Proceedings of Ma-
+334   writing and adversarial review. It has not been submitted             chine Learning Research, pp. 74133–74156, 2025. URL
+335   or externally peer reviewed. Responsible human authorship             https://proceedings.mlr.press/v267/z
+336   and domain-expert verification are required before submis-            eng25e.html.
+337   sion. The 2027 submission rules were unavailable at the
+338   audit date; the official 2026 template is used provisionally.
+339   The accompanying audit records distinguish generated hy-
+340   potheses, executed checks and unresolved questions.
+341
+342   References
+343
+      Aldirawi, T., Li, Y., and Guo, W. Conformal risk control
+344
+        under non-monotone losses: Theory and finite-sample
+345
+        guarantees. arXiv preprint arXiv:2604.01502v2, 2026.
+346
+        URL https://arxiv.org/abs/2604.01502
+347
+        v2.
+348
+349   Angelopoulos, A. N. Conformal risk control for non-
+350     monotonic losses. arXiv preprint arXiv:2602.20151v1,
+351     2026. URL https://arxiv.org/abs/2602.2
+352     0151v1.
+353
+354   Angelopoulos, A. N., Bates, S., Fisch, A., Lei, L., and
+355     Schuster, T. Conformal risk control. In International
+356    Conference on Learning Representations, 2024. URL
+357     https://proceedings.iclr.cc/paper_fi
+358     les/paper/2024/hash/f3549ef9b5ff520a
+359    7e41ff3cc306ab2b-Abstract-Conference.
+360     html.
+361
+      Kiyani, S., Pappas, G., and Hassani, H. Length optimiza-
+362
+        tion in conformal prediction. In Advances in Neural
+363
+        Information Processing Systems, volume 37, 2024. URL
+364
+        https://proceedings.neurips.cc/paper
+365
+        _files/paper/2024/hash/b41907dd4df5c
+366
+        60f86216b73fe0c7465-Abstract-Confere
+367
+        nce.html.
+368
+369   Liang, R., Zhu, W., and Barber, R. F. Conformal prediction
+370     after data-dependent model selection. arXiv preprint
+371     arXiv:2408.07066v4, 2026. URL https://arxiv.
+372     org/abs/2408.07066v4.
+373
+374   Vovk, V. Conditional validity of inductive conformal predic-
+375     tors. In Proceedings of the Asian Conference on Machine
+376     Learning, volume 25 of Proceedings of Machine Learn-
+377     ing Research, pp. 475–490, 2012. URL https://pr
+378     oceedings.mlr.press/v25/vovk12.html.
+379   Yang, Y. and Kuchibhotla, A. K. Selection and aggregation
+380     of conformal prediction sets. Journal of the American
+381     Statistical Association, 120(549):435–447, 2025. doi:
+382     10.1080/01621459.2024.2344700. URL https://ar
+383     xiv.org/abs/2104.13871v3.
+384
+                                                                      7
+                                       Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+385   A. Smoothness and Score Distributions
+386
+387   Write bj (y) = 1{y ∈
+                         / Aj }. On the interval [λj , λj+1 ], the full score definition is
+388
+                                 Sλ (u, y) = aK [bj (y) + (bj+1 (y) − bj (y))h((M − 1)λ − j) + u/4] .                             (19)
+389
+390
+      At the final endpoint, use the value at the last knot. The map ψ is infinitely differentiable with every derivative zero at zero
+391
+      from the right. Therefore h has zero derivatives of every positive order at both endpoints; adjacent interpolation pieces
+392
+      and the constant exterior extensions have matching derivatives of all orders. Since their unscaled values lie in [0, 5/4] and
+393
+      aK ≤ 1/8, scores lie in [0, 5/32] ⊂ [0, 1].
+394
+395   For 0 < t < 1, let g(t) = 1/(1 − t) − 1/t. Then h(t) = logistic(g(t)) and
+396
+                                               h′ (t) = h(t)(1 − h(t)) t−2 + (1 − t)−2 .
+                                                                                      
+397                                                                                                                               (20)
+398
+399   For t ≤ 1/2, g(t) ≤ 2 − 1/t, and h(t)(1 − h(t)) ≤ eg(t) . Putting v = 1/t ≥ 2 gives
+400
+401                                                    h′ (t) ≤ e2 e−v (v 2 + 4) ≤ 8,                                             (21)
+402
+403   because e−v (v 2 + 4) is decreasing on [2, ∞). Symmetry handles t ≥ 1/2. Multiplication by aK (M − 1) proves the
+404   uniform derivative bound one. For each fixed λ, the score law is a mixture of K uniform distributions, all of width aK /4. It
+405   is atomless, with density bounded by 4/aK . This bound is finite for each fixed family but grows exponentially with K;
+406   atomlessness is not a uniform anti-concentration rate across families.
+407   For completeness, when K = 1 the score construction still applies with M = 2, and the selected subset contains the sole
+408   label. The occupancy formula reduces to cn . If k = n + 1, all labels are included by the +∞ convention and the occupancy
+409   formula is not used.
+410
+411
+412   B. Additional Details for the Consistency Result
+413   We make the compactness step explicit. If ω(w) ̸→ 0, choose η > 0, wj ↓ 0, parameters λj and intervals (tj , tj + wj ] with
+414   probability at least η. Since scores lie in [0, 1], only interval locations in a bounded region can have positive probability for
+415   small wj . Pass to a subsequence with λj → λ∗ and tj → t∗ . On the interval event,
+416
+417                                    |Sλ∗ (Z) − t∗ | ≤ L∥λj − λ∗ ∥ + wj + |tj − t∗ | =: ej → 0.                                 (22)
+418
+419   For any fixed e > 0, all sufficiently large j imply P(|Sλ∗ (Z) − t∗ | ≤ e) ≥ η. Letting e ↓ 0 gives an atom of mass at least η,
+420   a contradiction.
+421
+      Thus for any r > 0, a sufficiently small parameter radius gives a rank net with error at most r. Its cardinality is finite and
+422
+      does not depend on n. For every center, the beta mean is cn → 1 − α and its variance is k(n + 1 − k)/[(n + 1)2 (n + 2)] → 0.
+423
+      A union bound over this fixed finite set gives convergence of both its maximum and minimum order statistics. This justifies
+424
+      the bracket argument without requiring a rate for the concentration modulus. It also shows why allowing K and therefore
+425
+      the score family to change with n falls outside the corollary.
+426
+427
+428   C. Implementation and Evaluation Details
+429
+      The package contains src/core.py, the frozen configuration, raw compressed arrays, result tables, a reproduction script,
+430
+      and a Git history. Each raw row corresponds to an independently generated calibration sample. The occupancy files contain
+431
+      adaptive, fixed, split and monotone conditional coverage, the number of distinct labels, the uniform order statistic and the
+432
+      split threshold. The split control evaluates the exact CDF
+433
+434
+                                      FA (q) = pA [4q]10 + (1 − pA )[4(q − 1)]10 ,      pA = |A|/K,                               (23)
+435
+436   where [x]10 = min(1, max(0, x)). Its tuning set and calibration set are disjoint. The monotone control uses gD (u) =
+437   (1 + U )u + mini Ui , evaluates the transformed quantile, and inverts gD . No simulated test labels are used in choosing a
+438   score or certificate.
+439
+                                                                      8
+                                      Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+440   The linear-score CDF used for evaluation is, with b = |β| > 0,
+441
+442                                            (q + b)2+ − (q − b)2+ − (q + b − 1)2+ + (q − b − 1)2+
+                                    Fβ (q) =                                                         .                           (24)
+443                                                                      4b
+444
+      For b = 0, it is [q]10 . This formula follows by integrating [q − βx]10 /2 over x ∈ [−1, 1]; independent numerical quadrature is
+445
+      a verification test. The conditional prediction set is {y ∈ [0, 1] : y ≤ q − βx}, so the CDF is precisely its coverage.
+446
+                                                                  −1
+447   For G = 257 candidates the finite-grid beta lower bound is Bn,k (δ/G). The DKW lower bound reported in the figure is
+448                                                   "     r             #
+449                                                     k      log(2G/δ)
+450                                                       −                  .                                          (25)
+                                                        n          2n
+                                                                                +
+451
+452   The factor two comes from using the two-sided DKW inequality; sharper one-sided versions are possible. We do not claim
+453   optimality of this baseline. The continuum net lower bound maximizes
+454                                                                        
+455                                                    −1        δ
+                                                      Bn,k               − 2ϵ                                            (26)
+456                                                          ⌈a/ϵ⌉ + 1         +
+457
+458   over 2,000 fixed logarithmically spaced radii between 10−5 and 0.25. A grid of that cardinality has spacing at most 2ϵ over
+459   [−a, a], and hence covering radius at most ϵ. Radius choice depends on known analytical constants, not simulation outcomes.
+460   All certificates are single-setting 95% probability statements; they are not a joint 95% statement over all experimental
+461   settings.
+462
+463                                            All eight labelings at one score threshold
+464
+                                         y=0     0     1      0     1      0        1   0     1
+465
+466                                              0     0      1     1      0        0   1     1
+                                         y=1
+467
+468                                      y=2     0     0      0     0      1        1   1     1
+469
+470                                             0/7    1/7   2/7    3/7   4/7    5/7    6/7   7/7
+
+471                                                          Scalar parameter knot
+472
+473   Figure 3. Executed exhaustive check for K = 3. At u = 1/2 and the common threshold aK /2, the smooth scalar knots realize
+      every binary membership vector. This directly refutes a VC-dimension upper bound of two under only bounded continuous scalar
+474   parameterization.
+475
+476   Floating-point evaluation of the explicit scalar interpolation is restricted to K ≤ 20 in the code. Tests use up to K = 12,
+477   with exhaustive masks through K = 6. Larger simulations operate on the mathematical identity in Equation (7) and
+478   independently audit its prediction event. A mask array does not instantiate the large-precision scalar; this is an exact
+479   alternative representation for checking the probability calculation. No claim about the numerical stability of huge scalar
+480   parameterizations follows.
+481
+482
+483   D. Full Confirmatory Results
+484   The following entries were all specified before confirmatory execution. Main-run seed: 73190421, with deterministic child
+485   streams by case index. The regular-family seed is 972041; the independent-test audit seed is 971144. Pilot seed: 20260928.
+486   Confidence intervals are pointwise mean ±1.96 empirical standard error across repetitions. They measure numerical Monte
+487   Carlo precision, not uncertainty about the validity of a proved identity. Every occupancy case uses 10,000 repetitions and
+488   every linear case uses 1,000.
+489
+490
+491   E. Scope of Verification and Reproduction
+492   The automated checks validate implementations and finite examples. The mathematical arguments were written and
+493   adversarially checked with AI assistance; no claim of independent human verification is made. No actual deep-learning
+494
+                                                                     9
+                                           Limits of Smooth Scalar Tuning in Split Conformal Prediction
+
+495   Table 2. Full occupancy results, in percent. Monotone control equals the fixed control up to floating-point roundoff and is preserved in the
+      raw data.
+496
+497                   n         K         α    Exact adaptive              Adaptive                   Fixed           Disjoint split
+498
+                      3         1        0.5         50.0000     49.9735 ± 0.4372        49.9735 ± 0.4372       66.5653 ± 0.4627
+499
+                      3         8        0.1        100.0000    100.0000 ± 0.0000       100.0000 ± 0.0000      100.0000 ± 0.0000
+500                   3         8        0.5         16.5039     16.5181 ± 0.1593        50.1386 ± 0.4371       67.0617 ± 0.4596
+501                  19        16        0.1         63.5944     63.6777 ± 0.1670        90.0624 ± 0.1260       90.8510 ± 0.1630
+502                  19        19        0.1         57.7818     57.7886 ± 0.1526        89.9656 ± 0.1278       90.9629 ± 0.1617
+503                  19       128        0.1         12.4604     12.4724 ± 0.0227        90.0111 ± 0.1280       90.9475 ± 0.1613
+                     19       190       0.05          9.0631      9.0705 ± 0.0126        95.0291 ± 0.0941      100.0000 ± 0.0000
+504
+                     19       190        0.1          8.5861      8.5856 ± 0.0147        90.0754 ± 0.1272       90.9930 ± 0.1612
+505                  19     1,900        0.1          0.8957      0.8959 ± 0.0013        90.0257 ± 0.1264       91.0635 ± 0.1594
+506                  99        16        0.1         89.8489     89.8910 ± 0.0608        90.0444 ± 0.0581       90.2201 ± 0.0814
+507                  99        99        0.1         57.0588     57.0847 ± 0.0672        89.9917 ± 0.0592       90.1906 ± 0.0806
+508                  99       128        0.1         48.5978     48.5264 ± 0.0548        89.9505 ± 0.0585       90.1437 ± 0.0803
+                     99       990        0.1          8.5687      8.5693 ± 0.0066        89.9907 ± 0.0581       90.1821 ± 0.0809
+509
+                     99       990        0.2          7.6167      7.6175 ± 0.0081        79.9963 ± 0.0782       80.4385 ± 0.1090
+510                  99     9,900        0.1          0.8956      0.8954 ± 0.0006        89.9599 ± 0.0590       90.1357 ± 0.0803
+511                  99    10,000        0.1          0.8866      0.8863 ± 0.0006        89.9700 ± 0.0595       90.1919 ± 0.0818
+512                 499        16        0.1         90.0000     89.9983 ± 0.0264        89.9983 ± 0.0264       90.0071 ± 0.0373
+513                 499       128        0.1         88.2031     88.1602 ± 0.0331        89.9689 ± 0.0265       90.0081 ± 0.0372
+                    499       499        0.1         56.9241     56.9305 ± 0.0297        90.0266 ± 0.0260       90.0956 ± 0.0367
+514
+                    499     4,990        0.1          8.5654      8.5648 ± 0.0030        89.9988 ± 0.0265       90.0416 ± 0.0367
+515                 499    49,900        0.1          0.8955      0.8955 ± 0.0003        89.9992 ± 0.0263       90.0531 ± 0.0374
+516
+517   Table 3. Linear family. Observed coverage is in percent; lower certificates are probabilities. The final column counts calibration samples
+518   below the continuum certificate out of 1,000.
+519
+520                         n       a     Observed coverage (%)      Grid beta    Continuum       DKW      Below continuum
+521                        49    0.25          86.0070 ± 0.2596        0.6970         0.7234     0.6113                     3
+522                        49       1          85.6362 ± 0.2813        0.6970         0.6953     0.6113                     1
+523                       199    0.25          87.8749 ± 0.1327        0.8103         0.8137     0.7522                     3
+524                       199       1          88.0202 ± 0.1336        0.8103         0.8024     0.7522                     1
+                          999    0.25          89.1328 ± 0.0554        0.8633         0.8616     0.8329                     2
+525                       999       1          89.2246 ± 0.0545        0.8633         0.8576     0.8329                     1
+526
+527
+528   benchmark, training run, ImageNet replication, or experiment on a practical temperature scaler was conducted. The public
+529   official implementation of the closest ICML paper was inspected for intended scope only.
+530
+531   The reference audit records which version and sections were inspected for every citation. Three cited 2026 works are
+532   preprints, not treated as peer-reviewed validation. The audit searched for corrections and closely related counterexamples;
+533   absence from the search is not proof of novelty. A concise contribution statement, claim-to-evidence map, review passes,
+534   issue table and remaining research questions are provided separately from the manuscript. Nothing in this local package
+535   constitutes submission, publication or acceptance.
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+                                                                          10
+

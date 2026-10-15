@@ -1,0 +1,32 @@
+{
+  "table_files_identical": {
+    "all_occupancy_table.tex": true,
+    "occupancy_table.tex": true,
+    "linear_table.tex": true
+  },
+  "figure_png_pixels_identical": {
+    "occupancy.png": true,
+    "certificates.png": true,
+    "shattering.png": true
+  },
+  "changed_macros": {
+    "RunSeconds": {
+      "frozen": "10.88",
+      "fresh": "10.74"
+    }
+  },
+  "regenerated_figure_source_hashes": {
+    "reviews/C_v2/fresh_results/occupancy_summary.csv": true,
+    "reviews/C_v2/fresh_results/linear_summary.csv": true,
+    "reviews/C_v2/fresh_results/run_manifest.json": true,
+    "results/pilot.json": true,
+    "src/make_artifacts.py": true,
+    "src/core.py": true
+  },
+  "saved_shattering_shape": [
+    8,
+    3
+  ],
+  "saved_shattering_binary": true,
+  "saved_shattering_all_eight_distinct": true
+}

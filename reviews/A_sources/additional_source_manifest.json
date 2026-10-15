@@ -1,0 +1,23 @@
+[
+  {
+    "key": "newey_mcfadden1994",
+    "url": "https://www.ssc.wisc.edu/~xshi/econ715/chap36neweymacfadden.pdf",
+    "path": "reviews/A_sources/newey_mcfadden1994.pdf",
+    "sha256": "43c9298a9b8630e9a1feb9910df4a39ad8bf2625545eb9d0d0d7190847ca7963",
+    "retrieved_utc": "2026-09-28T13:12:58.872481+00:00",
+    "status": "saved"
+  },
+  {
+    "key": "kiyani_learned2024",
+    "url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/kiyani24a/kiyani24a.pdf",
+    "path": "reviews/A_sources/kiyani_learned2024.pdf",
+    "sha256": "c6b53fef7c7f48f45c1e2fefbb74d38e71a6d9183886e73c2d7c078d50ddc129",
+    "retrieved_utc": "2026-09-28T13:12:59.192470+00:00",
+    "status": "saved"
+  },
+  {
+    "key": "oqrc2026",
+    "url": "https://arxiv.org/pdf/2609.03104v1",
+    "error": "IncompleteRead(4194304 bytes read, 8503130 more expected)"
+  }
+]

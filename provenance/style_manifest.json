@@ -1,0 +1,36 @@
+{
+  "url": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip",
+  "archive_sha256": "8b29290f5828e176debb57ea9cc00252502973d55ea561a2f18a7f0a326bfc6c",
+  "files": [
+    {
+      "file": "paper/icml2026.sty",
+      "archive_member": "icml2026.sty",
+      "sha256": "7cdcf90f6a59c5219e7f15c88f7ed09fcaf598dad91e6cdddc4dc3cb0e397a95",
+      "unchanged": true
+    },
+    {
+      "file": "paper/icml2026.bst",
+      "archive_member": "icml2026.bst",
+      "sha256": "0ec3d5eb9b02efb7e0b44a32f3775882f42a743d0bdc618f34e6936309b98764",
+      "unchanged": true
+    },
+    {
+      "file": "paper/algorithm.sty",
+      "archive_member": "algorithm.sty",
+      "sha256": "93fd0eb31c112eb405833db8f1d7f5d238c7e691b1c05680d7276e68f36d564a",
+      "unchanged": true
+    },
+    {
+      "file": "paper/algorithmic.sty",
+      "archive_member": "algorithmic.sty",
+      "sha256": "48d18794a5d97c0479a588cc2eac0917992feb9da83acc4631b8f55757d80f9b",
+      "unchanged": true
+    },
+    {
+      "file": "paper/fancyhdr.sty",
+      "archive_member": "fancyhdr.sty",
+      "sha256": "9130c52f91087abc6d223164ffa587e207e3257fcbcd069ef09ecb5391043f14",
+      "unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "key": "zeng2025",
+    "url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/zeng25e/zeng25e.pdf",
+    "retrieved_utc": "2026-09-28T12:47:13.995445+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/zeng25e/zeng25e.pdf",
+    "path": "literature/zeng2025.pdf",
+    "sha256": "466ff56da22aca89427e6c7a9667e54ebd3c6d962fa1f83a445253c011533866"
+  },
+  {
+    "key": "yang",
+    "url": "https://arxiv.org/pdf/2104.13871",
+    "retrieved_utc": "2026-09-28T12:47:14.247327+00:00",
+    "status": 200,
+    "final_url": "https://arxiv.org/pdf/2104.13871",
+    "path": "literature/yang.pdf",
+    "sha256": "e0f7c8246de481ba35e46b13f06ba175ae22c2737404b53f00824d1bd7acca6d"
+  },
+  {
+    "key": "liang",
+    "url": "https://arxiv.org/pdf/2408.07066",
+    "retrieved_utc": "2026-09-28T12:47:14.500649+00:00",
+    "status": 200,
+    "final_url": "https://arxiv.org/pdf/2408.07066",
+    "path": "literature/liang.pdf",
+    "sha256": "7e707e0afd0a680076d468717c1e7ae4032ce17160115265c93634c26bc4f071"
+  },
+  {
+    "key": "crc",
+    "url": "https://arxiv.org/pdf/2208.02814",
+    "retrieved_utc": "2026-09-28T12:47:14.737329+00:00",
+    "status": 200,
+    "final_url": "https://arxiv.org/pdf/2208.02814",
+    "path": "literature/crc.pdf",
+    "sha256": "32c3b9689cb69dbec96ce87ba8b0fe98293bb1c9a59247480b16dbae6aa37df2"
+  },
+  {
+    "key": "aldirawi2026",
+    "url": "https://arxiv.org/pdf/2604.01502",
+    "retrieved_utc": "2026-09-28T12:47:14.885289+00:00",
+    "status": 200,
+    "final_url": "https://arxiv.org/pdf/2604.01502",
+    "path": "literature/aldirawi2026.pdf",
+    "sha256": "d5d1f3b61ff2736c024a38c4fc657e25230d4ae75675aecc5d549715618a021c"
+  },
+  {
+    "key": "vovk2012",
+    "url": "https://arxiv.org/pdf/1209.2673",
+    "retrieved_utc": "2026-09-28T12:47:15.064893+00:00",
+    "status": 200,
+    "final_url": "https://arxiv.org/pdf/1209.2673",
+    "path": "literature/vovk2012.pdf",
+    "sha256": "759684870def3624568735591e7520e40f51fbf2f03f136a799f3b71672d26dc"
+  },
+  {
+    "key": "traub2024",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/047c84ec50bd8ea29349b996fc64af4b-Paper-Conference.pdf",
+    "retrieved_utc": "2026-09-28T12:47:15.180269+00:00",
+    "status": 200,
+    "final_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/047c84ec50bd8ea29349b996fc64af4b-Paper-Conference.pdf",
+    "path": "literature/traub2024.pdf",
+    "sha256": "2b5e3115c34a9c05d737306cfdd337297709b29e9052841812f753835124bc7c"
+  },
+  {
+    "key": "icml2026_call",
+    "url": "https://icml.cc/Conferences/2026/CallForPapers",
+    "retrieved_utc": "2026-09-28T12:47:16.350960+00:00",
+    "status": 200,
+    "final_url": "https://icml.cc/Conferences/2026/CallForPapers",
+    "path": "literature/icml2026_call.html",
+    "sha256": "70e6116e0702955f2b94c3c45be4b2fe4ce5e45f4a8b927c3a8d709999f34b6f"
+  },
+  {
+    "key": "icml2026_authors",
+    "url": "https://icml.cc/Conferences/2026/AuthorInstructions",
+    "retrieved_utc": "2026-09-28T12:47:16.723292+00:00",
+    "status": 200,
+    "final_url": "https://icml.cc/Conferences/2026/AuthorInstructions",
+    "path": "literature/icml2026_authors.html",
+    "sha256": "8e65a16765699a562243d7c020e642d0aa324a7679536699aaf72e639f1d99cf"
+  },
+  {
+    "key": "icml2026_reviewers",
+    "url": "https://icml.cc/Conferences/2026/ReviewerInstructions",
+    "retrieved_utc": "2026-09-28T12:47:17.138887+00:00",
+    "status": 200,
+    "final_url": "https://icml.cc/Conferences/2026/ReviewerInstructions",
+    "path": "literature/icml2026_reviewers.html",
+    "sha256": "3984f0a0d9c67e79050a6fdec016910051eb63ce654e43c5c4f5a762216ed580"
+  },
+  {
+    "key": "icml2027_call_check",
+    "url": "https://icml.cc/Conferences/2027/CallForPapers",
+    "retrieved_utc": "2026-09-28T12:47:17.575105+00:00",
+    "status": 404,
+    "final_url": "https://icml.cc/Conferences/2027/CallForPapers",
+    "error": "404 Client Error: Not Found for url: https://icml.cc/Conferences/2027/CallForPapers"
+  },
+  {
+    "key": "zeng_repo",
+    "url": "https://raw.githubusercontent.com/ml-stat-Sustech/Parametric-Scaling-Law-CP-Tuning/main/README.md",
+    "retrieved_utc": "2026-09-28T12:47:17.988544+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/ml-stat-Sustech/Parametric-Scaling-Law-CP-Tuning/main/README.md",
+    "path": "literature/zeng_repo.html",
+    "sha256": "318d122369304040f34e1eeb8dfb0627ec858ce00298bcf46b5a0afee6653e1b"
+  },
+  {
+    "key": "kiyani2024",
+    "url": "https://papers.neurips.cc/paper_files/paper/2024/file/b41907dd4df5c60f86216b73fe0c7465-Paper-Conference.pdf",
+    "path": "literature/kiyani2024.pdf",
+    "status": 200,
+    "sha256": "0f15112cd4e6e4576748d745d7701e767a69f1f5d1631e9e21b9362c97edf7b8",
+    "retrieved_utc": "2026-09-28T12:51:51.535370+00:00"
+  },
+  {
+    "key": "angelopoulos2026",
+    "url": "https://arxiv.org/pdf/2602.20151",
+    "path": "literature/angelopoulos2026.pdf",
+    "status": 200,
+    "sha256": "099ff363853ea8150dfafb2b23e17a5137c4b5dbdb911db9b1e193b9de4d42dd",
+    "retrieved_utc": "2026-09-28T12:51:51.705438+00:00"
+  },
+  {
+    "key": "vovk2012_published",
+    "url": "https://proceedings.mlr.press/v25/vovk12/vovk12.pdf",
+    "path": "literature/vovk2012_published.pdf",
+    "status": 200,
+    "sha256": "7687a3be5702c52074e1b48e7317f1e068e9581ff832c65f7efca659c665ed3a",
+    "retrieved_utc": "2026-09-28T12:51:51.877979+00:00"
+  },
+  {
+    "key": "crc2024_published",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f3549ef9b5ff520a7e41ff3cc306ab2b-Paper-Conference.pdf",
+    "path": "literature/crc2024_published.pdf",
+    "status": 200,
+    "sha256": "0fff32a0254a47f06a399522b83ba463d0ca62f71e3a0e094985d80cba166c0c",
+    "retrieved_utc": "2026-09-28T13:11:32.427280+00:00"
+  },
+  {
+    "key": "newey_mcfadden1994",
+    "url": "https://www.ssc.wisc.edu/~xshi/econ715/chap36neweymacfadden.pdf",
+    "path": "literature/newey_mcfadden1994.pdf",
+    "sha256": "43c9298a9b8630e9a1feb9910df4a39ad8bf2625545eb9d0d0d7190847ca7963",
+    "retrieved_utc": "2026-09-28T13:12:58.872481+00:00",
+    "status": "saved"
+  }
+]
