@@ -1,0 +1,22 @@
+{
+  "occupancy_rows_checked": 84,
+  "linear_rows_checked": 6,
+  "references_checked": 9,
+  "pdf_pages": 10,
+  "main_body_page_upper_bound": 7,
+  "impact_statement_page": 7,
+  "pdf_bytes": 323024,
+  "pdf_sha256": "4532fc3b9c175de2a310c7f8ab1863f529ccd5ce32f921408dd449d43d065c13",
+  "numeric_and_citation_checks_pass": true,
+  "note": "Programmatic verification supplements visual page inspection; it does not verify mathematical novelty or proofs.",
+  "release_date": "2026-10-15",
+  "existing_tests_passed": 8,
+  "frozen_snapshot_file_hashes_verified": 46,
+  "reproduction": {
+    "raw_files_compared": 28,
+    "maximum_absolute_difference": 9.547918011776346e-15,
+    "scientific_results_match": true,
+    "tolerance": 1e-12
+  },
+  "validation_scope": "Existing local Python environment; this run does not claim a fresh dependency installation or external peer review."
+}
